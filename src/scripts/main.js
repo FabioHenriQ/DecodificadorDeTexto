@@ -1,40 +1,53 @@
 let textarea = document.querySelector('textarea');
 let boxResult = document.querySelector('#result');
-
+let divEmpty = document.querySelector('.container_empty');
 
 
 function criptografar() {
-    let content = textarea.value.toLowerCase();
-    let listContent = content.split('');
-    
-    let newList = [];
+    let empty = IsItEmpty();
+    if(empty) {
+        divEmpty.classList.add("hidden");
+        divEmpty.classList.remove("show");
 
-    listContent.forEach((letra) => {
-        switch (letra) {
-            case "e":
-                newList.push("enter");
-                break;
-            case "j":
-                newList.push("imes");
-                break;
-            case "a":
-                newList.push("ai");
-                break;
-            case "o":
-                newList.push("ober");
-                break;
-            case "u":
-                newList.push("ufat");
-                break;
-            default:
-                newList.push(letra);
-        }
-    });
+        let content = textarea.value.toLowerCase();
+        let listContent = content.split('');
+        
+        let newList = [];
 
-    console.log(newList.join(''));
+        listContent.forEach((letra) => {
+            switch (letra) {
+                case "e":
+                    newList.push("enter");
+                    break;
+                case "j":
+                    newList.push("imes");
+                    break;
+                case "a":
+                    newList.push("ai");
+                    break;
+                case "o":
+                    newList.push("ober");
+                    break;
+                case "u":
+                    newList.push("ufat");
+                    break;
+                default:
+                    newList.push(letra);
+            }
+        });
+        boxResult.textContent = "Mensagem criptografada: " + newList.join('');
+    } else {
+        divEmpty.classList.add("show");
+        divEmpty.classList.remove("hidden");
+    }
 }
 
 function descriptografar() {
+    let empty = IsItEmpty();
+    if(empty) {
+        divEmpty.classList.add("hidden");
+        divEmpty.classList.remove("show");
+
         let content = textarea.value.toLowerCase();
         let decryptedMessage = "";
     
@@ -59,7 +72,18 @@ function descriptografar() {
                 decryptedMessage += content[i];
             }
         }
+        boxResult.textContent = "Mensagem descriptografada: " + decryptedMessage;
+    } else {
+        divEmpty.classList.add("show");
+        divEmpty.classList.remove("hidden");
+    }
     
-        console.log("String descriptografada:", decryptedMessage);
-    
+}
+
+function IsItEmpty() {
+    if(textarea.value != '') {
+        return true;
+    } else {
+        return false;
+    }
 }

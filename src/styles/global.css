@@ -6,8 +6,50 @@
 
 main {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    padding: 2%;
+}
+
+.container_empty {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.container_text-buttons {
+    text-align: center;
+    width: 50%;
+}
+
+.container_text-buttons textarea {
+    width: 100%;
+    padding: 10px;
+    max-height: 250px;
+    min-height: 200px;
+    resize: vertical;
+    outline: none;
+}
+
+.container_results {
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result {
+    padding: 10px;
+    max-width: 100%;
+    word-wrap: break-word;
 }
