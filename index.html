@@ -9,6 +9,23 @@
     <script src="./src/scripts/main.js" defer></script>
 </head>
 <body>
-    
+    <main>
+        <div class="container_text-buttons">
+            <h1>Decodificador</h1>
+            <textarea cols="30" rows="10" placeholder="Escreva algo para Criptografar/Descriptografar"></textarea>
+            <div class="container_buttons">
+                <button onclick="criptografar()">Criptografar</button>
+                <button onclick="descriptografar()">Descriptografar</button>
+            </div>
+        </div>
+        <div class="container_results">
+            <p id="result"></p>
+            <div class="container_empit">
+                <img src="./src/assets/images/criptografia.svg" alt="Imagem que mostra que está vazio">
+                <h2>Nenhuma mensagem encintrada</h2>
+                <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
