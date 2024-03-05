@@ -77,6 +77,10 @@ main {
     justify-content: center;
 }
 
+.container_result-show {
+    background-color: red;
+}
+
 #result {
     padding: 10px;
     max-width: 100%;

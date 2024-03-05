@@ -1,5 +1,6 @@
 let textarea = document.querySelector('textarea');
 let boxResult = document.querySelector('#result');
+let containerResult = document.querySelector('.container_result-show');
 let divEmpty = document.querySelector('.container_empty');
 
 
@@ -8,6 +9,7 @@ function criptografar() {
     if(empty) {
         divEmpty.classList.add("hidden");
         divEmpty.classList.remove("show");
+        containerResult.classList.remove("hidden");
 
         let content = textarea.value.toLowerCase();
         let listContent = content.split('');
@@ -40,6 +42,7 @@ function criptografar() {
         boxResult.textContent = "";
         divEmpty.classList.add("show");
         divEmpty.classList.remove("hidden");
+        containerResult.classList.add("hidden");
     }
 }
 
@@ -48,6 +51,7 @@ function descriptografar() {
     if(empty) {
         divEmpty.classList.add("hidden");
         divEmpty.classList.remove("show");
+        containerResult.classList.remove("hidden");
 
         let content = textarea.value.toLowerCase();
         let decryptedMessage = "";
@@ -78,6 +82,7 @@ function descriptografar() {
         boxResult.textContent = "";
         divEmpty.classList.add("show");
         divEmpty.classList.remove("hidden");
+        containerResult.classList.add("hidden");
     }
     
 }
@@ -88,4 +93,9 @@ function IsItEmpty() {
     } else {
         return false;
     }
+}
+
+function copy() {
+    let text = boxResult.textContent;
+    navigator.clipboard.writeText(text);
 }
