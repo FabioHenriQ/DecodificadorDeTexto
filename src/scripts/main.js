@@ -35,8 +35,9 @@ function criptografar() {
                     newList.push(letra);
             }
         });
-        boxResult.textContent = "Mensagem criptografada: " + newList.join('');
+        boxResult.textContent = newList.join('');
     } else {
+        boxResult.textContent = "";
         divEmpty.classList.add("show");
         divEmpty.classList.remove("hidden");
     }
@@ -72,8 +73,9 @@ function descriptografar() {
                 decryptedMessage += content[i];
             }
         }
-        boxResult.textContent = "Mensagem descriptografada: " + decryptedMessage;
+        boxResult.textContent = decryptedMessage;
     } else {
+        boxResult.textContent = "";
         divEmpty.classList.add("show");
         divEmpty.classList.remove("hidden");
     }

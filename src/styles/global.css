@@ -37,6 +37,35 @@ main {
     min-height: 200px;
     resize: vertical;
     outline: none;
+    font-size: 1.1rem;
+}
+
+.container_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.container_buttons button {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 30%;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #0000ff;
+    border: 1px solid;
+    transition: .5s;
+}
+
+.container_buttons button:not(:first-child) {
+    color: #0000ff;
+    background-color: #fff;
+}
+
+.container_buttons button:hover {
+    transform: scale(1.05);
 }
 
 .container_results {
