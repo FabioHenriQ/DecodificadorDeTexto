@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -11,6 +14,11 @@ main {
     width: 100vw;
     height: 100vh;
     padding: 2%;
+    gap: 5%;
+}
+
+main h1 {
+    font-family: 'Kanit', 'Roboto', sans-serif;
 }
 
 .container_empty {
@@ -18,7 +26,7 @@ main {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .show {
@@ -27,17 +35,20 @@ main {
 
 .container_text-buttons {
     text-align: center;
-    width: 50%;
+    width: 100%;
 }
 
 .container_text-buttons textarea {
-    width: 100%;
+    width: 60%;
     padding: 10px;
     max-height: 250px;
     min-height: 200px;
     resize: vertical;
     outline: none;
     font-size: 1.1rem;
+    color: #0000ff;
+    text-align: center;
+    border: 0;
 }
 
 .container_buttons {
@@ -46,7 +57,7 @@ main {
     gap: 2%;
 }
 
-.container_buttons button {
+.container_buttons button, .container_result-show button {
     cursor: pointer;
     padding: 12px;
     font-size: 1rem;
@@ -59,30 +70,42 @@ main {
     transition: .5s;
 }
 
-.container_buttons button:not(:first-child) {
+.container_buttons button:not(:first-child), .container_result-show button {
     color: #0000ff;
     background-color: #fff;
 }
 
-.container_buttons button:hover {
+.container_buttons button:hover, .container_result-show button:hover {
     transform: scale(1.05);
 }
 
 .container_results {
     height: 100%;
-    width: 50%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 75vw;
+}
+.container_results p {
+    font-weight: 300;
 }
 
 .container_result-show {
-    background-color: red;
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 300;
+    box-shadow: 1px 1px 7px 1px #00000044;
+    
 }
 
 #result {
     padding: 10px;
+    width: 50%;
     max-width: 100%;
     word-wrap: break-word;
 }
