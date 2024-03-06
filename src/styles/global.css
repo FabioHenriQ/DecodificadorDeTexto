@@ -109,3 +109,17 @@ main h1 {
     max-width: 100%;
     word-wrap: break-word;
 }
+
+@media  screen and (max-width: 908px) {
+    main {
+        flex-direction: column;
+    }
+
+    .container_empty img {
+        display: none;
+    }
+
+    .container_result-show {
+        width: 90%;
+    }
+}
