@@ -17,3 +17,7 @@ Feito para praticar, através de um desafio do INICIANTE EM PROGRAMAÇÃO T6 - O
     <li>Descriptografa o texto criptografado</li>
     <li>Capaz de copiar o resultado através de um botão</li>
 </ul>
+
+### Status
+
+[![Finalizado](https://img.shields.io/badge/Finalizadoo-green)](https://fabio-henrique-portifolio.netlify.app/)
